@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-# encarnia
-An open source MUD (text-based multiplayer online game) based upon Evennia, a Python MUD Engine
-
-MIT license, no support is provided but common changes can be found with the comments WHN (Whitehorse note) or TCN (Team change note).
-
-Also, the game name was originally going to be Amrall, this changed but the "game" folder name is still Amrall.
-=======
 # encarnia_mud_code_base
 A "code base" for the Python MUD engine Encarnia.
 
@@ -16,4 +8,3 @@ A "code base" for the Python MUD engine Encarnia.
 3.  Since this was a learning experience for me, lots of hard #dbref numbers are used in the code and since Encarnia's source code available here on github leaves out the database (so that people can't find passwords etc. from the example MUD) this also means that you will get a lot of errors referring to unfound rooms when things like character death happen, or your character generation won't quite work because the room numbers are different.  The answers to these issues include changing the code to either point to your correct rooms that you built yourself or writing code that will search for the appropriate room type, which is harder to program and requires more system resources but also might avoid database issues.
 
 4.  To get the game up and running, do a normal Evennia install, then replace your /mygame folder with /Encarnia and replace /evennia with the /evennia from Encarnia if you want.  Make sure your database file is not deleted when you do this or problems will arise; it's also possible to flush and make new databases without migrating I think.  Note that replacing Evennia's core files is not recommended by the creators of Evennia because it prevents you from being able to take advantage of updates to the core game engine, however if you want things available in the Encarnia base game such as auto-formatted channels and other features I've lost track of, you will need to either use Encarnia's version of the core evennia files or you will need to learn how to override the core evennia files and then copy that functionality from Encarnia's existing evennia files into your overrides, something that I never learned how to do since it was far easier to just change the core game engine files once I figured out which code was changing which things.  You could also rewrite Evennia's core files yourself like I did, which is a risky business that will annoy people in the Evennia chat if you later on find yourself having to ask them for help regarding files they told people not to change.
->>>>>>> 36c1cd28fd3cd70230a15716b58828897b8e063c
