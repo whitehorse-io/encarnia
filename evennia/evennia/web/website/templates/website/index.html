@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block header_ext %}
+{% endblock %}
+
+{% block content %}
+<div class="rowOfBoxes">
+   <!--div class="twoThirds noBorderOnLeft"-->
+   <div class="noBorderOnLeft">
+      <h1>Welcome!</h1>
+      <p>Welcome to Encarnia, your friendly
+      neighborhood next-generation RP-PvP MUD inspired by Achaea, Avalon, Gemstone IV etc.  We have a high fantasy setting based around a concept we call Fae magic.
+        {% if webclient_enabled %}
+        You can connect to the game directly from your browser using our
+        <a href="{% url 'webclient:index' %}">online client</a>! 
+	You might also want to check out our <a href="http://encarnia.forumotion.com/">forums</a>.<br></br>
+        {% endif %}
+      You can also connect to the game through a 3rd party client, just telnet to 54.200.123.230, port 4000.
+      </p>
+   </div>
+</div>
+
+<div class="rowOfBoxes dividingBorderAbove">
+
+   <div class="quarter noBorderOnLeft">
+      <h1>Online Now</h1>
+      <p>
+      There's currently <strong>{{num_players_connected}}</strong> players connected out of a total of <strong>{{num_players_registered}}</strong> players registered.
+      </p>
+   </div>
+
+   <div class="quarter">
+      <h1>Playerbase</h1>
+      <ul>
+      <strong>{{num_players_connected_recent}}</strong> accounts have connected within the last seven days and <strong>{{num_players_registered_recent}}</strong> accounts were created this week.
+      </ul>
+      <p class="filler"><!-- Filler para to extend left vertical line --></p>
+   </div>
+
+   <div class="quarter">
+      <h1>Database Stats</h1>
+      <ul>
+      <li>{{num_players_registered}} players (+ {{num_characters}} characters)</li>
+      <li>{{num_rooms}} rooms (+ {{num_exits}} exits)</li>
+      <li>{{num_others}} other objects</li>
+
+      </ul>
+   </div>
+
+   <div class="quarter">
+      <h1>Made with Evennia</h1>
+      <p><a href="http://evennia.com">Evennia</a> is an open-source MUD server built in
+      <a href="http://python.org">Python</a>, on top of the
+      <a href="http://twistedmatrix.com">Twisted</a> and
+      <a href="http://djangoproject.com">Django</a> frameworks. This
+      combination of technologies allows for the quick and easy creation
+      of the game of your dreams - as simple or as complex as you like.</p>
+   </div>
+
+</div>
+{% endblock %}

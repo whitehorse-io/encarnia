@@ -1,0 +1,6 @@
+#!/home/ubuntu/muddev/pyenv/bin/python
+# EASY-INSTALL-DEV-SCRIPT: 'evennia==0.6.0','evennia'
+__requires__ = 'evennia==0.6.0'
+__import__('pkg_resources').require('evennia==0.6.0')
+__file__ = '/home/ubuntu/muddev/evennia/bin/unix/evennia'
+exec(compile(open(__file__).read(), __file__, 'exec'))
